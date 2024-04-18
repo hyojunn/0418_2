@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<style type="text/css">\
+    			@font-face {
+    font-family: 'Pretendard-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: Thin;}
+		@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;}
+    			@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: bold;}
+   @font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+		html{font-family: 'Pretendard-Regular'; line-height: 1.5}
+		.wrap{width: 1200px; margin: auto;}
+		body, h1, h2, p{margin: 0}
+		h2{font-family: 'JalnanGothic'; font-weight: 800; font-size: 4.5rem; padding-top: 60px; line-height: 1.3; color: black; padding-bottom: 20px;}
+		h3{font-family: 'Pretendard-Bold'; font-weight: 800; font-size: 4.5rem; padding-top: 60px; line-height: 1.3; color: white; padding-bottom: 20px; margin: 0;}
+		h4{font-family: 'Pretendard-Thin'; font-weight: 300; font-size: 1.5rem; padding-top: 60px; line-height: 1.8; color: white; padding-bottom: 20px; margin: 0;}
+		h5{font-family: 'Pretendard-Bold'; font-size: 3rem; padding-top: 30px; padding-bottom: 60px; line-height: 1.7; color: black;  background-color: white; padding: 10px; border-radius: 10px; width: 450px;}
+		h6{font-family: 'Pretendard-Bold'; font-weight: 800; font-size: 4.5rem; line-height: 1.3; color: black; padding-bottom: 20px; margin: 0;}
+		h7{font-family: 'Pretendard-Bold'; font-weight: 800; font-size: 2.5rem; line-height: 1.3; color: #FF007F; padding-bottom: 20px; padding-top: 20px;}
+		p{font-family: 'Pretendard-Regular'; font-size: 1.6rem; padding-top: 30px; padding-bottom: 60px; line-height: 1.7; color: black;}
+		div{word-break: keep-all;}
+		body{background: white;}
+		img{width: 100%; display: block;}
+		.img2{width: 60%}
+		.white{background: white;}
+		.black{background: black}
+		.left-spacing{padding-left: 150px;}
+		.right-spacing{padding-right: 150px;}
+		.center-spacing{padding-left: 100px; padding-right: 100px; text-align: center;}
+		.magenta{background: #FF007F;}
+		.thin{font-family: 'Pretendard-Thin'}
+		.img1{position: absolute;  top: 300px; left: 30%; z-index: 999;transform: translate(-50%, -50%);}
+		.moving-text-container {overflow: hidden; font-size: 50px; font-family: 'Pretendard-Bold'; color: white; font-weight: 900px; position: relative; background: #FF007F; padding-top: 10px; padding-bottom: 10px;}
+		.moving-text {animation: moveRight 20s linear infinite;}
+		@keyframes moveRight {from {transform: translateX(-100%);}
+   	 	to {transform: translateX(100%);}}
+		.item{width: 100%; background: black; margin: 5px;}
+		.flex3{display: flex; margin: auto; font-family: 'Pretendard-Regular'; font-weight: 400; line-height: 1.1;}
+		.flex2{display: flex; gap: 2% 10px; flex-wrap: wrap; margin: auto;}
+			.thumb1, .thumb2, .thumb3, .thumb4{height: 200px; background: blue;}
+			.thumb1{background: url(step1.png); background-size: cover;}
+			.thumb2{background: url(step2.png); background-size: cover;}
+			.thumb3{background: url(step3.png); background-size: cover;}
+			.thumb4{background: url(step4.png); background-size: cover;}
+		.image-container {position: relative; width: 100%;}
+		.text-overlay {position: absolute; top: 10%;
+    left: 50%; /* 이미지 좌측에서 50% 위치로 이동 */
+    transform: translate(-50%, -50%); /* 텍스트를 가운데 정렬 */
+    padding: 10px; /* 텍스트 주변 여백 설정 */
+    border-radius: 5px; /* 텍스트 박스 모서리를 둥글게 설정 */
+    color: black; /* 텍스트 색상 설정 */
+    font-family: 'Pretendard-Bold'; font-size: 2rem;}
+    	.white2{color: white; text-align: right;}
+    	.white3{text-align: right;}
+    	.text-overlay2 {position: absolute; top: 20%;left: 40%;
+    transform: translate(-40%, -40%);padding: 0px;
+    border-radius: 5px; color: #FF007F; font-family: 'Pretendard-Bold'; font-size: 5rem;}
+        .text-overlay3 {position: absolute; top: 62%;left: 40%;
+    transform: translate(-40%, -40%);padding: 0px;
+    border-radius: 5px; color: #FF5DAD; font-family: 'Pretendard-Bold'; font-size: 5rem;}
+        .text-overlay4 {position: absolute; top: 73%;left: 40%;
+    transform: translate(-40%, -40%);padding: 0px;
+    border-radius: 5px; color: #FFB0D7; font-family: 'Pretendard-Bold'; font-size: 5rem; opacity: 70%}
+        .text-overlay5 {position: absolute; top: 92%;left: 40%;
+    transform: translate(-40%, -40%);padding: 0px;
+    border-radius: 5px; color: #FFB0D7; font-family: 'Pretendard-Bold'; font-size: 5rem; opacity: 70%}
+    .stiker{position: absolute; top:300px; left: 30% z-index:999; transform: translate(-50%,-50%);}
+
+		</style>
+</head>
+<section>
+	<img src="head.png">
+	<h2 class="center-spacing">험악하고 끊이지 않는<br>사건에 피곤하지 않나요?
+	</h2>
+	<p class="center-spacing">
+	쏟아지는 강력범죄로 인한 감정 소모로 지쳐가는 현대 사회.<br>사건 사고, 범죄에 관한 기사, 사진 등을 잠시 흐린 눈으로 스쳐지나가 보세요.
+	</p>
+	<img src="2023-2024.png">
+</section>
+<section class="magenta">
+
+	<img src="all.png">
+</section>
+<section class="full">
+	<div class="image-container">
+	<img src="newspaper.jpg">
+	<div class="text-overlay2 center-spacing">
+	산뜻하게 하루를 시작하고 싶고<br>쉴 때는 아무생각 없이 즐겁기만<br> 하고 싶은데 머리 아파 죽겠네...
+	</div>
+	<div class="text-overlay3 center-spacing">
+	산뜻하게 하루를 시작하고 싶고<br>쉴 때는 아무생각 없이 즐겁기만<br> 하고 싶은데 머리 아파 죽겠네...
+	</div>
+	<div class="text-overlay4 center-spacing">
+	산뜻하게 하루를 시작하고 싶고<br>쉴 때는 아무생각 없이 즐겁기만<br> 하고 싶은데 머리 아파 죽겠네...
+	</div>
+	<div class="text-overlay5 center-spacing">
+	산뜻하게 하루를 시작하고 싶고<br>쉴 때는 아무생각 없이 즐겁기만<br> 
+	</div>
+</section>
+<section class="black">
+
+	<img src="next.png">
+	<h3 class="center-spacing">
+		<span style="color:#00FFF6;">‘BLURRY EYE’</span>를 <br>사용해보세요.
+	</h3>
+	<div class="sticker">
+		<img src="eye inside.png">
+		
+	</div>
+	<div class="wrap">
+	<div class="image-container">
+	<h5 class="white3">
+		<div style="text-align: right;">
+	특수 렌즈가 지닌 가능성
+	</h5>
+</div>
+	<h4 class="right-spacing">
+		<div style="text-align: right;">
+	‘BLURRY EYE’는 사건사고와 관련된 각종 자료들을 보기<br> 싫을 때 흐리게 만들어주는 안경입니다. 일반적인 안경과<br> 유사한 외관이지만 특수한 렌즈로 이루어져 있어 눈에 띄지 <br>않고도 흐리게 보이는 효과를 누릴 수 있습니다.
+		</div>
+	</h4>
+</div>
+	<img src="round.png">
+</section>
+<section>
+<div class="moving-text-container">
+    <div class="moving-text">ENJOY  BLURRY  EYE  ENJOY  BLURRY  EYE  ENJOY BLURRY  EYE</div>
+</section>
+<section>
+	<img src="glasses.png">
+	<div class="wrap">
+	<h6>
+	일반적인 안경처럼 <br> 간편하게 착
+	</h6>
+	<p>
+	일어나자마자 사용하면 하루를 산뜻하게 시작해 볼 수 있답니다. <br>장소, 공간의 제약없이 언제 어디서나 필요할 때 꺼내쓰는 간편함.
+	</p>
+	<img src="hand.jpg">
+</section>
+<section class="white">
+	<div class="image-container">
+    <img src="background.png">
+    <div class="text-overlay center-spacing">손으로 버튼을 톡톡 두드리면 바뀌는 4단계의 모자이크로 <br>원하는 강도에 맞게 설정하여 사용해보세요</div>
+</div>
+	<div class="wrap">
+		<div class="flex3">
+		<div class="item">
+		<div class="thumb1"></div>
+	<h7 class="center-spacing">1단계
+	</h7>
+</div>
+	<div class="item">
+		<div class="thumb2"></div>
+	<h7 class="center-spacing">2단계
+	</h7>
+	</div>
+	<div class="item">
+		<div class="thumb3"></div>
+		<h7 class="center-spacing">3단계
+	</h7>
+	</div>
+	<div class="item">
+		<div class="thumb4"></div>
+		<h7 class="center-spacing">4단계
+	</h7>
+</div>
+</section>
+<section class="black">
+	<div class="wrap">
+	<h6 class="white2">
+	놀라운 <span style="color:#00FFF6;">평온함</span>과 <br> 함께하는 엄청난 효과
+	</h6>
+	<img src="face.png">
+	<h4>
+	피곤하고 불안하게 만드는 사건 사고,<br> 범죄에서 벗어나 아름답고 행복한 이야기로<br> 휴식을 가져보세요. 좋은 것만 보는 안경이<br> 여러분을 편안하게 해줄게요.
+	</h4>
+</section>
+<section>
+		<img src="dot.png">
+</section>
